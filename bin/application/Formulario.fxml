@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="642.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControladorFormulario">
+   <children>
+      <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="642.0" prefWidth="500.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <GridPane layoutX="-2.0" prefHeight="284.0" prefWidth="500.0">
+                    <columnConstraints>
+                      <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="244.0" minWidth="10.0" prefWidth="184.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="316.0" minWidth="10.0" prefWidth="316.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Nombre:" />
+                        <Label text="Apellido:" GridPane.rowIndex="1" />
+                        <Label text="Edad:" GridPane.rowIndex="2" />
+                        <Label text="Genero:" GridPane.rowIndex="3" />
+                        <Label text="Profesion:" GridPane.rowIndex="4" />
+                        <Label text="Supervisor:" GridPane.rowIndex="5" />
+                        <Label text="Salario:" GridPane.rowIndex="6" />
+                        <Label text="Estatus:" GridPane.rowIndex="7" />
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <children>
+                              <HBox prefHeight="32.0" prefWidth="311.0" spacing="5.0">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="6.0" />
+                                 </padding>
+                                 <children>
+                                    <RadioButton fx:id="rbtFemenino" mnemonicParsing="false" text="Femenino">
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="grupoGenero" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="rbtMasculino" mnemonicParsing="false" text="Masculino" toggleGroup="$grupoGenero">
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </RadioButton>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <TextField fx:id="nombre" GridPane.columnIndex="1" />
+                        <TextField fx:id="apellido" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="edad" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <HBox prefHeight="32.0" prefWidth="311.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                           <children>
+                              <RadioButton fx:id="rbtContratado" mnemonicParsing="false" text="Contratado">
+                                 <HBox.margin>
+                                    <Insets top="4.0" />
+                                 </HBox.margin>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="grupoEstatus" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="rbtDespedido" mnemonicParsing="false" text="Despedido" toggleGroup="$grupoEstatus">
+                                 <HBox.margin>
+                                    <Insets top="4.0" />
+                                 </HBox.margin>
+                              </RadioButton>
+                           </children>
+                           <padding>
+                              <Insets left="5.0" right="5.0" top="6.0" />
+                           </padding>
+                        </HBox>
+                        <ComboBox fx:id="cboProfesion" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <ComboBox fx:id="cboSupervisor" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <TextField fx:id="salario" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                     </children>
+                  </GridPane>
+                  <HBox layoutX="-1.0" layoutY="284.0" prefHeight="32.0" prefWidth="498.0">
+                     <children>
+                        <HBox prefHeight="43.0" prefWidth="500.0" spacing="5.0">
+                           <children>
+                              <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#nuevo" text="Nuevo">
+                                 <HBox.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="btnGuardar" mnemonicParsing="false" onAction="#guardar" text="Guardar">
+                                 <HBox.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="btnActualizar" mnemonicParsing="false" onAction="#actualizar" text="Actualizar">
+                                 <HBox.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <ListView fx:id="lstEmpleados" prefHeight="317.0" prefWidth="498.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
