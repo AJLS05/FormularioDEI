@@ -80,7 +80,7 @@ public class ControladorFormulario implements Initializable,Serializable{
 				new ChangeListener<Empleado>() {
 
 					@Override
-					public void changed(ObservableValue<? extends Empleado> arg0, Empleado valorAnteriorValue,
+					public void changed(ObservableValue<? extends Empleado> arg0, Empleado valorAnterior,
 							Empleado valorActual) {
 						System.out.println("Valor actual: "+valorActual);
 						if (valorActual!=null) {
@@ -112,8 +112,8 @@ public class ControladorFormulario implements Initializable,Serializable{
 			ObjectInputStream archivo = new ObjectInputStream(new FileInputStream("empleados.data"));
 			try {
 				while (true) {
-					Empleado p = (Empleado)archivo.readObject();
-					empleados.add(p);
+					Empleado e = (Empleado)archivo.readObject();
+					empleados.add(e);
 				}
 			}catch(EOFException e) {
 				System.out.println("Fin del archivo");
@@ -233,6 +233,5 @@ public class ControladorFormulario implements Initializable,Serializable{
 						)
 				);
 	}
-	
 
 }

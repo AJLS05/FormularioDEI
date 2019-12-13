@@ -6,7 +6,7 @@ public class Profesion extends Persona implements Serializable{
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -2618101052274394257L;
 	private String nombreProfesion;
 	private int codigoProfesion;
 	
@@ -36,7 +36,7 @@ public class Profesion extends Persona implements Serializable{
 	
 	@Override
 	public String toString() {
-		return "Profesion [nombreProfesion=" + nombreProfesion + ", codigoProfesion=" + codigoProfesion + "]";
+		return nombreProfesion + ", Codigo de Profesion: " + codigoProfesion;
 	}
 	
 	

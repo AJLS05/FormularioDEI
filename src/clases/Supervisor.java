@@ -4,7 +4,7 @@ public class Supervisor extends Persona{
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -3538583063812405399L;
 	private int cantidadSubordinados;
 	private int codigoDepartamento;
 	private String nombreDepartamento;
@@ -43,8 +43,8 @@ public class Supervisor extends Persona{
 
 	@Override
 	public String toString() {
-		return "Supervisor [cantidadSubordinados=" + cantidadSubordinados + ", codigoDepartamento=" + codigoDepartamento
-				+ ", nombreDepartamento=" + nombreDepartamento + "]";
+		return getNombre() + ", Cantidad de Subordinados: " + cantidadSubordinados + ", Codigo de Departamento: " + codigoDepartamento
+				+ ", Nombre del Departamento: " + nombreDepartamento;
 	}
-
+	
 }

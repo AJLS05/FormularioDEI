@@ -6,7 +6,7 @@ public class Empleado extends Persona implements Serializable{
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 8516839436461286048L;
 	private Supervisor supervisor;
 	private int salario;
 	private String estadoContractual;
@@ -55,8 +55,9 @@ public class Empleado extends Persona implements Serializable{
 
 	@Override
 	public String toString() {
-		return "Empleado [supervisor=" + supervisor + ", salario=" + salario + ", estadoContractual="
-				+ estadoContractual + ", profesion=" + profesion + "]";
+		return "Empleado: Nombre: " + getNombre() + ", Apellido: " + getApellido() + ", Edad: " + getEdad()
+				+ ", Genero: " + getGenero() + ", Supervisor: " + supervisor + ", salario: " + salario
+				+ ", Estado Contractual: " + estadoContractual + ", profesion: " + profesion;
 	}
 	
 }
